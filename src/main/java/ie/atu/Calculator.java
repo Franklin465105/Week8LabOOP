@@ -17,5 +17,12 @@ public class Calculator {
         return result;
     }
 
+    public int mul(int i, int i1) {
+        if(i >= Integer.MAX_VALUE || i1 >= Integer.MAX_VALUE)
+            throw new ArithmeticException("Number cannot be greater than or equal to Integer.MAX_VALUE");
+        int result = i*i1;
+        return result;
+    }
+
 
 }
