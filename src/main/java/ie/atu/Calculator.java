@@ -10,5 +10,12 @@ public class Calculator {
         return result;
     }
 
+    public int sub(int i, int i1) {
+        if(i <= Integer.MIN_VALUE || i1 <= Integer.MIN_VALUE)
+            throw new ArithmeticException("Number cannot be less than or equal to Integer.MIN_VALUE");
+        int result = i-i1;
+        return result;
+    }
+
 
 }
