@@ -44,6 +44,18 @@ public class CalculatorTest {
         assertEquals("Number cannot be less than or equal to Integer.MIN_VALUE", ex.getMessage());
     }
 
+    @Test
+    public void testMul_Success()
+    {
+        assertEquals(12, calc.mul(3,4));
+    }
+
+    @Test
+    public void testMul_Fail()
+    {
+        Exception ex = assertThrows(ArithmeticException.class, ()-> calc.mul(Integer.MAX_VALUE, 1));
+        assertEquals("Number cannot be greater than or equal to Integer.MAX_VALUE", ex.getMessage());
+    }
 
 
 }
